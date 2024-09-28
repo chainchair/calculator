@@ -11,12 +11,12 @@ public class Menu {
         String[] options= new String[]{"sum","substract","multiply","division"};
         for(String C:count){ //show a decrecent counter for the init of the program
             System.out.print(C);
-            TimeUnit.SECONDS.sleep(2);
+            TimeUnit.SECONDS.sleep(1);
             System.out.print("\r");
         }
         for(int i=0;i< options.length;i++){ //shows the options for the user
             System.out.println((i+1)+". "+options[i]);
-            TimeUnit.SECONDS.sleep(1);
+            TimeUnit.MILLISECONDS.sleep(500);
         }
         Entry();
 
