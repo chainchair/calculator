@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
-import java.util.Scanner;
+
 public class Menu {
 
     public static Scanner scan = new Scanner(System.in);
@@ -9,7 +9,7 @@ public class Menu {
     public static void show() throws InterruptedException{
         String[] count= new String[]{"three...","two...","one...","Program started..."};
         String[] options= new String[]{"sum","substract","multiply","division"};
-        for(String C:count){ //show a decrecent counter for the init of the program
+        for(String C:count){ //show a decrement counter for the init of the program
             System.out.print(C);
             TimeUnit.SECONDS.sleep(1);
             System.out.print("\r");
@@ -33,7 +33,7 @@ public class Menu {
                     Operations.sum();
                     break;
                 case 2:
-                    Operations.substract();
+                    Operations.subtract();
                     break;
                 case 3:
                     Operations.multiplication();

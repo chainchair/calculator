@@ -12,14 +12,14 @@ public class Operations {
         int summed = Integer.sum(a,b);
         System.out.println(summed);
     }
-    public static void substract(){
+    public static void subtract(){
         int a,b;
         Scanner scan =new Scanner(System.in);
         System.out.println("enter a, and b statements");
         a =  scan.nextInt();
         b =  scan.nextInt();
-        int substract = a-b;
-        System.out.println(substract);
+        int subtract = a-b;
+        System.out.println(subtract);
     }
     public static void multiplication(){
         int a,b;
@@ -37,10 +37,10 @@ public class Operations {
         a =  scan.nextInt();
         b =  scan.nextInt();
         if(b==0){
-            System.out.println("division by cero");
+            System.out.println("division by zero");
             return;
         }
-        int division = (int) a/b;
+        int division = a/b;
         System.out.println(division);
     }
 }
