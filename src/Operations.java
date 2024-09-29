@@ -8,7 +8,7 @@ public class Operations {
         System.out.println("enter a, and b statements");
         a =  scan.nextInt();
         b =  scan.nextInt();
-
+    
         int summed = Integer.sum(a,b);
         System.out.println(summed);
     }
