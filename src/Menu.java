@@ -14,7 +14,7 @@ public class Menu {
             TimeUnit.SECONDS.sleep(1);
             System.out.print("\r");
         }
-        System.out.println("Jd y Samue");
+        System.out.println("Jd y Samuel");
         for(int i=0;i< options.length;i++){ //shows the options for the user
             System.out.println((i+1)+". "+options[i]);
             TimeUnit.MILLISECONDS.sleep(500);
