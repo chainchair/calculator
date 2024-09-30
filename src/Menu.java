@@ -4,11 +4,10 @@ import java.util.concurrent.TimeUnit;
 public class Menu {
 
     public static Scanner scan = new Scanner(System.in); // create a new scanner who receive input from keyboard
-
-
+    public static String[] count= new String[]{"three","two","one","Program started"};
+    public static String[] options= new String[]{"sum","subtract","multiply","division"};
+    public static boolean condition=true;
     public static void show() throws InterruptedException{
-        String[] count= new String[]{"three","two","one","Program started"};
-        String[] options= new String[]{"sum","subtract","multiply","division"};
 
         for(String C:count){ //show a decrement counter for the init of the program
             System.out.print(C);
@@ -30,11 +29,11 @@ public class Menu {
 
     public static void options(){
 
-        boolean condition=true;
-        while(condition){
+
+        while(condition){ //while condition==true
             System.out.println("select an option");
             int number = scan.nextInt();
-            switch (number){
+            switch (number){ //switch between options
                 case 1:
                     Operations.sum();
                     break;
@@ -52,8 +51,7 @@ public class Menu {
                     condition=false;
                     break;
                 default:
-                    System.out.println("Option not suported");
-                    condition=false;
+                    System.out.println("Option not supported");
                     break;
 
             }
