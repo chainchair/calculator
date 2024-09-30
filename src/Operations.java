@@ -3,7 +3,7 @@ public class Operations {
     public static int a=0,b=0;
     public static Scanner scan =new Scanner(System.in);
 
-    private static void entry() {  //the extracted method changes the value of the global variables a and b to use them in the operation methods
+    private static void entry() {  //the entry() method changes the value of the global variables a and b to use them in the operation methods
         System.out.println("enter a, and b statements");
         a =  scan.nextInt();
         b =  scan.nextInt();
