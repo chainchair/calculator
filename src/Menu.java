@@ -7,8 +7,10 @@ public class Menu {
     public static int number;
 
     public static void show() throws InterruptedException{
+
         String[] count= new String[]{"three...","two...","one...","Program started..."};
         String[] options= new String[]{"sum","substract","multiply","division"};
+
         for(String C:count){ //show a decrement counter for the init of the program
             System.out.print(C);
             TimeUnit.SECONDS.sleep(1);
