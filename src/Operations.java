@@ -1,41 +1,30 @@
 import java.util.*;
 public class Operations {
+    public static int a=0,b=0;
+    public static Scanner scan =new Scanner(System.in);
 
-
-    public static void sum(){
-        int a,b;
-        Scanner scan =new Scanner(System.in);
+    private static void entry() {  //the extracted method changes the value of the global variables a and b to use them in the operation methods
         System.out.println("enter a, and b statements");
         a =  scan.nextInt();
         b =  scan.nextInt();
-    
+    }
+    public static void sum(){
+        entry();
         int summed = Integer.sum(a,b);
         System.out.println(summed);
     }
     public static void subtract(){
-        int a,b;
-        Scanner scan =new Scanner(System.in);
-        System.out.println("enter a, and b statements");
-        a =  scan.nextInt();
-        b =  scan.nextInt();
+        entry();
         int subtract = a-b;
         System.out.println(subtract);
     }
     public static void multiplication(){
-        int a,b;
-        Scanner scan =new Scanner(System.in);
-        System.out.println("enter a, and b statements");
-        a =  scan.nextInt();
-        b =  scan.nextInt();
+        entry();
         int multiplication = a*b;
         System.out.println(multiplication);
     }
     public static void division(){
-        int a,b;
-        Scanner scan =new Scanner(System.in);
-        System.out.println("enter a, and b statements");
-        a =  scan.nextInt();
-        b =  scan.nextInt();
+        entry();
         if(b==0){
             System.out.println("division by zero");
             return;
