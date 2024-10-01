@@ -7,21 +7,23 @@ public class Menu {
     public static String[] count= new String[]{"three","two","one","Program started"};
     public static String[] options= new String[]{"sum","subtract","multiply","division"};
     public static boolean condition=true;
+    public static final int timer = 300;
     public static void show() throws InterruptedException{
+
 
         for(String C:count){ //show a decrement counter for the init of the program
             System.out.print(C);
-            TimeUnit.MILLISECONDS.sleep(500);
+            TimeUnit.MILLISECONDS.sleep(timer);
             for (int i = 0; i < 3; i++) {
                 System.out.print(".");
-                TimeUnit.MILLISECONDS.sleep(500);
+                TimeUnit.MILLISECONDS.sleep(timer);
             }
             System.out.print("\r");
         }
         System.out.println("Jd y Samuel");
         for(int i=0;i< options.length;i++){ //shows the options for the user
             System.out.println((i+1)+". "+options[i]);
-            TimeUnit.MILLISECONDS.sleep(500);
+            TimeUnit.MILLISECONDS.sleep(timer);
         }
         options();
 
