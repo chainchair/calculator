@@ -1,35 +1,36 @@
 import java.util.*;
 public class Operations {
-    public static int a=0,b=0; //global variables
+    public static String string=""; //global variables
     public static Scanner scan =new Scanner(System.in); //definition of scan as the scanner
+    public static String[] arr;
 
     private static void entry() {  //the entry() method changes the value of the global variables a and b to use them in the operation methods
-        System.out.println("enter a, and b statements");
-        a =  scan.nextInt();
-        b =  scan.nextInt();
+        System.out.println("enter the expression");
+        string =  scan.nextLine();
+
     }
+
     public static void sum(){
         entry();
-        int summed = Integer.sum(a,b);
+        arr = string.split("\\+");
+        int summed = Arrays.stream(arr).mapToInt(Integer:: parseInt).reduce(0,Integer::sum);
         System.out.println(summed);
     }
     public static void subtract(){
         entry();
-        int subtract = a-b;
+        arr = string.split("-");
+        int subtract = Arrays.stream(arr).mapToInt(Integer:: parseInt).reduce((a,b)->a-b).orElse(0);
         System.out.println(subtract);
     }
     public static void multiplication(){
         entry();
-        int multiplication = a*b;
+        arr = string.split("\\*");
+        int multiplication = Arrays.stream(arr).mapToInt(Integer:: parseInt).reduce(1,(a,b)->a*b);
         System.out.println(multiplication);
     }
     public static void division(){
         entry();
-        if(b==0){ //if the user is trying to do a division by zero show a message and scape the method
-            System.out.println("division by zero not supported,try again");
-            return;
-        }
-        int division = a/b;
+        int division = 0;
         System.out.println(division);
     }
 }
