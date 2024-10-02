@@ -4,7 +4,7 @@ public class Operations {
     public static Scanner scan =new Scanner(System.in); //definition of scan as the scanner
     public static String[] arr;
 
-    private static void entry() {  //the entry() method changes the value of the global variables a and b to use them in the operation methods
+    private static void entry() {  //the entry() method gets a string whit one operation and modify global string who is used in the operation methods
         System.out.println("enter the expression");
         string =  scan.nextLine();
 
@@ -30,7 +30,15 @@ public class Operations {
     }
     public static void division(){
         entry();
-        int division = 0;
+        arr = string.split("/");
+        Double division = Arrays.stream(arr).mapToDouble(Double:: parseDouble).reduce((a,b)->{
+            if (b == 0.0) {
+                System.out.println("Error: Division by zero is not supported");
+                return a;
+            } else {
+                return a / b;
+            }
+        }).orElse(Double.NaN);
         System.out.println(division);
     }
 }
